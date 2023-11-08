@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Actions" xml:space="preserve">
+    <value>أجراءات</value>
+  </data>
+  <data name="Add Brand" xml:space="preserve">
+    <value>أضف العلامة التجارية</value>
+  </data>
+  <data name="Add Extended Attribute" xml:space="preserve">
+    <value>إضافة الخصائص الإضافية</value>
+  </data>
+  <data name="Advanced Search" xml:space="preserve">
+    <value>البحث المتقدم</value>
+  </data>
+  <data name="Bordered" xml:space="preserve">
+    <value>يحدها</value>
+  </data>
+  <data name="Brands" xml:space="preserve">
+    <value>العلامات التجارية</value>
+  </data>
+  <data name="Brands exported" xml:space="preserve">
+    <value>تصدير الماركات</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="Cert No" xml:space="preserve">
+    <value>رقم الشهادة</value>
+  </data>
+  <data name="Certificate Number" xml:space="preserve">
+    <value>رقم الشهادة</value>
+  </data>
+  <data name="Check In" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="Check Out" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="Checked In Successfully" xml:space="preserve">
+    <value>تم تسجيل الدخول بنجاح</value>
+  </data>
+  <data name="Checked Out Successfully" xml:space="preserve">
+    <value>تم تسجيل الخروج بنجاح</value>
+  </data>
+  <data name="CheckIn Date" xml:space="preserve">
+    <value>تاريخ تسجيل الدخول</value>
+  </data>
+  <data name="CheckOut Date" xml:space="preserve">
+    <value>تاربخ تسجيل الخروج</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>مسح</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>الكود</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>إنشاء</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>تاريخ</value>
+  </data>
+  <data name="Date Range For Searching" xml:space="preserve">
+    <value>الفترة الزمنية للبحث</value>
+  </data>
+  <data name="Date Recorded" xml:space="preserve">
+    <value>تاريخ التسجيل</value>
+  </data>
+  <data name="Decimal" xml:space="preserve">
+    <value>عشري</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Delete Content" xml:space="preserve">
+    <value>حذف المحتوى</value>
+  </data>
+  <data name="Dense" xml:space="preserve">
+    <value>كثيف</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>وصف</value>
+  </data>
+  <data name="Description1" xml:space="preserve">
+    <value>وصف</value>
+  </data>
+  <data name="Differance" xml:space="preserve">
+    <value>الصافى</value>
+  </data>
+  <data name="Direct To" xml:space="preserve">
+    <value>توجيه الى</value>
+  </data>
+  <data name="Driver" xml:space="preserve">
+    <value>السائق</value>
+  </data>
+  <data name="Drivers" xml:space="preserve">
+    <value>السائقين</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="Empty Scale" xml:space="preserve">
+    <value>وزن فارغ</value>
+  </data>
+  <data name="EmptyScale time" xml:space="preserve">
+    <value>تاريخ الوزن الفارغ</value>
+  </data>
+  <data name="Entity Id" xml:space="preserve">
+    <value>رقم المعرف</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>تصدير</value>
+  </data>
+  <data name="External Id" xml:space="preserve">
+    <value>المعرف الخارجي</value>
+  </data>
+  <data name="Filtered Brands exported" xml:space="preserve">
+    <value>تم تصدير العلامات التجارية المفلترة</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>مجموعة</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>المعرف</value>
+  </data>
+  <data name="Id1" xml:space="preserve">
+    <value>المعرّف</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>استيراد</value>
+  </data>
+  <data name="Is Active" xml:space="preserve">
+    <value>مفعل؟</value>
+  </data>
+  <data name="Json" xml:space="preserve">
+    <value>Json</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>مفتاح</value>
+  </data>
+  <data name="Kilometer reading" xml:space="preserve">
+    <value>قرائة عداد الكيلو متر</value>
+  </data>
+  <data name="Loan" xml:space="preserve">
+    <value>العهده</value>
+  </data>
+  <data name="Manage Brands." xml:space="preserve">
+    <value>إدارة العلامات التجارية.</value>
+  </data>
+  <data name="Manage Mill tractor Weight" xml:space="preserve">
+    <value>ادارة موازين جرارات القمح</value>
+  </data>
+  <data name="Manage PortImport" xml:space="preserve">
+    <value>إدارة تحميل قمح من الميناء</value>
+  </data>
+  <data name="Manage Tractors." xml:space="preserve">
+    <value>ادارة الجرارات</value>
+  </data>
+  <data name="MBU Already Exists" xml:space="preserve">
+    <value>تمت اضافتها من قبل</value>
+  </data>
+  <data name="Message No" xml:space="preserve">
+    <value>رقم الرسالة</value>
+  </data>
+  <data name="MessageData" xml:space="preserve">
+    <value>الرسائل</value>
+  </data>
+  <data name="Mill" xml:space="preserve">
+    <value>الدقيق</value>
+  </data>
+  <data name="Mill tractor Weight" xml:space="preserve">
+    <value>موازين جرارات القمح</value>
+  </data>
+  <data name="Mill tractor Weight Domyat" xml:space="preserve">
+    <value>موازين جرارات القمح دمياط</value>
+  </data>
+  <data name="Mill tractor Weight Wady ElNile" xml:space="preserve">
+    <value>موازين جرارات القمح وادي النيل</value>
+  </data>
+  <data name="Mills" xml:space="preserve">
+    <value>المطاحن</value>
+  </data>
+  <data name="MillWeight" xml:space="preserve">
+    <value>موازين القمح</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="NameAr" xml:space="preserve">
+    <value>الاسم بالعربي</value>
+  </data>
+  <data name="No Allowed Actions" xml:space="preserve">
+    <value>لا توجد إجراءات مسموح بها</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>موافق</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>الميناء</value>
+  </data>
+  <data name="Port Scale" xml:space="preserve">
+    <value>ميزان الميناء</value>
+  </data>
+  <data name="PortImport" xml:space="preserve">
+    <value>تحميل قمح من الميناء</value>
+  </data>
+  <data name="Ports" xml:space="preserve">
+    <value>الموانئ</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>الكمية</value>
+  </data>
+  <data name="Reload" xml:space="preserve">
+    <value>إعادة تحميل</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>الادوار</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="Search for" xml:space="preserve">
+    <value>البحث عن</value>
+  </data>
+  <data name="Search for Brands" xml:space="preserve">
+    <value>ابحث عن العلامات التجارية</value>
+  </data>
+  <data name="Shipping Policy" xml:space="preserve">
+    <value>رقم البوليصة</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>المقاس</value>
+  </data>
+  <data name="Standing Scale" xml:space="preserve">
+    <value>وزن القائم</value>
+  </data>
+  <data name="StandingScale time" xml:space="preserve">
+    <value>تاريخ الوزن القائم</value>
+  </data>
+  <data name="Striped" xml:space="preserve">
+    <value>مخطط</value>
+  </data>
+  <data name="Supplier Name" xml:space="preserve">
+    <value>المورد</value>
+  </data>
+  <data name="Suppliers" xml:space="preserve">
+    <value>الموردين</value>
+  </data>
+  <data name="Tax" xml:space="preserve">
+    <value>ضريبة </value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>نص</value>
+  </data>
+  <data name="The mill" xml:space="preserve">
+    <value>المطحن</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>وقت</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>الإجمالي</value>
+  </data>
+  <data name="Total Amount Recived" xml:space="preserve">
+    <value>اجمالى الكمية المستلمة</value>
+  </data>
+  <data name="Total Amount Shipped" xml:space="preserve">
+    <value>اجمالي الكمية المشحونة</value>
+  </data>
+  <data name="Tractor" xml:space="preserve">
+    <value>الجرار</value>
+  </data>
+  <data name="Tractors" xml:space="preserve">
+    <value>الجرارات</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>نوع</value>
+  </data>
+  <data name="Unit Weight" xml:space="preserve">
+    <value>وحدة الوزن</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="Update Extended Attribute" xml:space="preserve">
+    <value>تحديث الخصائص الإضافية</value>
+  </data>
+  <data name="Vessel" xml:space="preserve">
+    <value>المركب</value>
+  </data>
+  <data name="Vessel Arrival Eta" xml:space="preserve">
+    <value>تاريخ وصول المركب</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="View Tasks" xml:space="preserve">
+    <value>عرض المهام</value>
+  </data>
+  <data name="Weight Time" xml:space="preserve">
+    <value>زمن التعتيق</value>
+  </data>
+  <data name="Wheat Protin" xml:space="preserve">
+    <value>البروتين</value>
+  </data>
+  <data name="Wheat Type Name" xml:space="preserve">
+    <value>نوع القمح</value>
+  </data>
+  <data name="Wheat Types" xml:space="preserve">
+    <value>انواع القمح</value>
+  </data>
+  <data name="WheatTypes" xml:space="preserve">
+    <value>انواع القمح</value>
+  </data>
+</root>

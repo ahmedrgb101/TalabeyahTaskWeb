@@ -1,0 +1,27 @@
+﻿<MudMenu Icon="@Icon" Color="@IconColor">
+    <div class="d-flex justify-space-between align-center px-2">
+        <h6 class="mud-typography mud-typography-subtitle2">Notifications</h6>
+        <MudButton OnClick="@MarkAllAsReadAsync">
+            <span class="mud-button-label"><span class="mud-button-icon-start mud-button-icon-size-medium"><svg class="mud-icon-root mud-svg-icon mud-icon-size-medium" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"></path></svg></span>Mark as read</span>
+        </MudButton>
+        @*  <button type="button" class="mud-button-root mud-button mud-button-text mud-button-text-primary mud-button-text-size-medium mud-ripple ml-16 mr-n2" _bl_492=""><span class="mud-button-label"><span class="mud-button-icon-start mud-button-icon-size-medium"><svg class="mud-icon-root mud-svg-icon mud-icon-size-medium" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"></path></svg></span>Mark as read</span></button>*@
+    </div>
+    <MudList Clickable="true" Style="max-height:450px;overflow:scroll;">
+        @if (_notifications != null)
+        {
+            foreach (var notification in _notifications)
+            {
+            <MudListItem OnClick="(() => MarkAsReadAsync(notification.Id))" Icon="@Icons.Material.Filled.CircleNotifications"
+                     IconColor="@(notification.IsRead?Color.Inherit:Color.Error)">
+                    <MudText Typo="Typo.body1">
+                        <MudText Typo="Typo.subtitle2">
+                            <MudText Typo="Typo.h6">@notification.Text</MudText>
+                        </MudText>
+                        <MudText Typo="Typo.body2"> @notification.CreatedOn </MudText>
+                    </MudText>
+                </MudListItem>
+                <MudDivider />
+            }
+        }
+    </MudList>
+</MudMenu>

@@ -1,0 +1,41 @@
+﻿@using System.Security.Claims
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.AspNetCore.Components.WebAssembly.Http
+@using Microsoft.Extensions.Configuration
+@using Microsoft.Extensions.DependencyInjection
+@using Microsoft.Extensions.Localization
+@using Microsoft.JSInterop
+@using TalabeyahTaskWeb.Client
+@using TalabeyahTaskWeb.Client.Shared
+@using TalabeyahTaskWeb.Client.Pages.Authentication
+@using TalabeyahTaskWeb.Client.Pages.Multitenancy
+@using TalabeyahTaskWeb.Client.Components.Common
+@using TalabeyahTaskWeb.Client.Components.EntityTable
+@using TalabeyahTaskWeb.Client.Components.Localization
+@using TalabeyahTaskWeb.Client.Components.Notifications
+@using TalabeyahTaskWeb.Client.Components.ThemeManager
+@using TalabeyahTaskWeb.Client.Infrastructure.ApiClient
+@using TalabeyahTaskWeb.Client.Infrastructure.Auth
+@using TalabeyahTaskWeb.Client.Infrastructure.Common
+@using TalabeyahTaskWeb.Client.Infrastructure.Notifications
+@using TalabeyahTaskWeb.Client.Infrastructure.Preferences
+@using FSH.WebApi.Shared.Authorization
+@using Blazored.LocalStorage
+@using Mapster
+@using MediatR.Courier
+@using MudBlazor
+
+@attribute [Authorize]
+
+@inject NavigationManager Navigation
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+@inject IConfiguration Config
+@inject IClientPreferenceManager ClientPreferences

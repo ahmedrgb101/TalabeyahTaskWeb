@@ -1,0 +1,79 @@
+﻿@page "/Ticket/Tickets"
+@using TalabeyahTaskWeb.Client.Pages.Tickets.Dialogs;
+@using TalabeyahTaskWeb.Client.Pages.Tickets;
+@attribute [MustHavePermission(FSHAction.View, FSHResource.Tickets)]
+
+@inject IStringLocalizer<SharedResource> L
+@inject ITicketClient TicketClient
+
+<FshTitle Title="@L["Tickets"]" Description="@L["Manage Tickets."]" />
+
+<EntityTable @ref="_table" TEntity="TicketDto" TId="Guid" TRequest="UpdateTicketRequest" Context="@Context">
+    <ExtraActions>
+        @if (context.Id != Guid.Empty)
+        {
+            <MudMenuItem OnTouch="@(() => InvokeApplicantListModal(context))" @onclick="@(() => InvokeApplicantListModal(context))">@L["Handle Ticket"]</MudMenuItem>
+        }
+    </ExtraActions>
+    <EditFormContent>
+        <MudItem xs="12" md="12">
+            <MudTextField T="string" For="@(() => context.PhoneNumber)" @bind-Value="context.PhoneNumber" Label="@L["Phone Number"]" />
+        </MudItem>
+        <MudItem xs="12" md="4">
+            <GovernorateAutocomplete For="@(() => context.GovernorateId)" @bind-Value="context.GovernorateId" />
+        </MudItem>
+        <MudItem xs="12" md="4">
+            <CityAutocomplete For="@(() => context.CityId)" @bind-Value="context.CityId" />
+        </MudItem>
+        <MudItem xs="12" md="4">
+            <DistrictAutocomplete For="@(() => context.DistrictId)" @bind-Value="context.DistrictId" />
+        </MudItem>
+    </EditFormContent>
+
+</EntityTable>
+
+@code
+{
+    protected EntityServerTableContext<TicketDto, Guid, UpdateTicketRequest> Context { get; set; } = default!;
+    private EntityTable<TicketDto, Guid, UpdateTicketRequest> _table = default!;
+
+    protected override void OnInitialized() =>
+        Context = new(
+            entityName: L["Ticket"],
+            entityNamePlural: L["Ticket"],
+            entityResource: FSHResource.Tickets,
+            colorAll: true,
+            fields: new()
+                      {
+                new(Client => Client.PhoneNumber, L["Phone Number"], "PhoneNumber", ColorValueFunc:propa=>propa.Color),
+                new(Client => Client.Governrate, L["Governrate"], "Governrate"),
+                new(Client => Client.City, L["City"], "City"),
+                new(Client => Client.District, L["District"], "District"),
+                new(Client => Client.CreateDateTime, L["Create On"], "CreateDateTime"),
+                new(Client => Client.IsHandled, L["Is Handled"], "IsHandled",typeof(bool)),
+                     },
+            idFunc: Client => Client.Id,
+            searchFunc: async filter => (await TicketClient
+                .SearchAsync(filter.Adapt<SearchTicketsRequest>()))
+                .Adapt<PaginationResponse<TicketDto>>(),
+            createFunc: async Client => await TicketClient.CreateAsync(Client.Adapt<CreateTicketRequest>()),
+            updateFunc: async (id, name) => await TicketClient.UpdateAsync(id, name),
+            deleteFunc: async id => await TicketClient.DeleteAsync(id),
+            exportFunc: async id => await TicketClient.ExportAsync(new ExportTicketsRequest()));
+
+    private async Task InvokeApplicantListModal(TicketDto entity)
+    {
+        var parameters = new DialogParameters()
+        {
+            { nameof(HandleTicket.TicketId), entity.Id },
+            { nameof(HandleTicket.IsHandled), entity.IsHandled },
+            { nameof(HandleTicket.Table), _table }
+        };
+
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Medium, FullWidth = true, DisableBackdropClick = true };
+
+        var dialog = DialogService.Show<HandleTicket>(string.Empty, parameters, options);
+
+        var result = await dialog.Result;
+    }
+}
